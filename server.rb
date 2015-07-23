@@ -32,6 +32,10 @@ class TransitApp < Sinatra::Base
 		ActiveRecord::Base.connection.close
 	end
 
+	get "/" do
+		puts "Add /bikeshare or /stationLocation or /trainRealTime to see json returned by back-end"
+	end
+
 	get "/stationLocation" do
 		spot = WmataAPI.new
 		a = []

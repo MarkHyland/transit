@@ -33,7 +33,8 @@ class TransitApp < Sinatra::Base
 	end
 
 	get "/" do
-		puts "Add /bikeshare or /stationLocation or /trainRealTime to see json returned by back-end"
+		a = "Add /bikeshare or /stationLocation or /trainRealTime to see json"
+		a.to_json
 	end
 
 	get "/stationLocation" do

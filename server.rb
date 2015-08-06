@@ -16,6 +16,7 @@ class TransitApp < Sinatra::Base
 	enable :sessions
 
 	set :session_secret, (ENV["SESSION_SECRET"] || "development")
+	set :protect_from_csrf, false
 		
 	use Rack::Cors do 
 		allow do
